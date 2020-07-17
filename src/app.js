@@ -43,12 +43,6 @@ function validateProjectId(request, response, next) {
   } return response.status(400).json({error: 'Invalid project ID.'}); 
 }
 
-// function incrementLikes(request, response, next) {
-//   const { like } = request.params;
-  
-//   return next(likes++);
-// }
-
 app.use('/repositories/:id', validateProjectId);
 // app.use('/repositories/:id/like', validateProjectId, incrementLikes);
 
